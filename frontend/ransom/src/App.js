@@ -8,24 +8,14 @@ require("firebase/auth");
 require("firebase/firestore");
 require('firebase/database');
 
-/*
-REACT_APP_API_KEY=AIzaSyAylkbPwGjXuySbA5pDT3DK3ac8JBpZZnM
-REACT_APP_AUTH_DOMAIN=ethical-hacking-56322.firebaseapp.com
-REACT_APP_DATABASE_URL=https://ethical-hacking-56322.firebaseio.com
-REACT_APP_PROJECT_ID=ethical-hacking-56322
-REACT_APP_STORAGE_BUCKET=ethical-hacking-56322.appspot.com
-REACT_APP_MESSAGING_SENDER_ID=65240116622
-REACT_APP_APP_ID=1:652401166225:web:6739c523cf47fe83b4fc30
-*/
-
 // establish firebase configs
 const config = {
-  apiKey: "AIzaSyAylkbPwGjXuySbA5pDT3DK3ac8JBpZZnM",//process.env.REACT_APP_API_KEY,
-  authDomain: "ethical-hacking-56322.firebaseapp.com",//process.env.REACT_APP_AUTH_DOMAIN,
-  databaseURL: "https://ethical-hacking-56322.firebaseio.com",//process.env.REACT_APP_DATABASE_URL,
-  projectId: "ethical-hacking-56322",//process.env.REACT_APP_PROJECT_ID,
-  storageBucket: "ethical-hacking-56322.appspot.com",
-  messagingSenderId: 65240116622,//process.env.REACT_APP_MESSAGING_SENDER_ID,
+  apiKey: process.env.REACT_APP_API_KEY,
+  authDomain: process.env.REACT_APP_AUTH_DOMAIN,
+  databaseURL: process.env.REACT_APP_DATABASE_URL,
+  projectId: process.env.REACT_APP_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGING_SENDER_ID,
 };
 firebase.initializeApp(config);
 
@@ -59,7 +49,7 @@ class App extends React.Component {
     }).catch((snapshot) => {
       // Reject keys not in database
       alert("Key is invalid!");
-      console.log("invalid key");
+      console.log(snapshot);
     });
     
   }
