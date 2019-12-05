@@ -68,7 +68,7 @@ class App extends React.Component {
           <p>Your decrypt key is: {this.state.output}</p>
           <a href="https://raw.githubusercontent.com/bucktower/other-ethical-proj/master/decrypt.py">Download Here</a>
           <h2>Instructions</h2>
-          <p>Save the above python script. In a command line terminal, run "python3 decrypt.py {this.state.output}". Make sure the folder to decrypt only contains the encrypted files.</p>
+          <p>Save the above python script. In a command line terminal, run "python3 decrypt.py" When prompted, input the secret key: {this.state.output}. Make sure the folder to decrypt only contains the encrypted files.</p>
         </div>
       )
     }
