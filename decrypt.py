@@ -30,6 +30,8 @@ def decrypt(key, filename):
 
         outfile.write(decryptor.decrypt(chunk))
         outfile.truncate(filesize)
+        
+    os.remove(filename)
 
 # Generate SHA256 key based off of password
 def getKey(password):
